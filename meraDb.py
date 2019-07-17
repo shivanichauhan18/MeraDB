@@ -29,4 +29,3 @@ class MeraDB():
         file_handler.close()
         print "DB dumped successfully!"
         return "OK"
-print load("shivi.db")
