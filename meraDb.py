@@ -2,7 +2,7 @@ import json
 def load(fileName): #this function I made class object where  I call class .
     meraDb =MeraDB(fileName) # this line I call class . and make object.
     meraDb.load_file() # this line we use load function call.
-    return meraDB 
+    return meraDb 
 class MeraDB():
                             # this is my class where I create All function like load and dump and I make constructor also
     fileName = ""
