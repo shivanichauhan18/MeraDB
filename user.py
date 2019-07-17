@@ -1,3 +1,4 @@
 import meraDb
 db = meraDb.load("shivi.db")
-db.dump()
+print db.setData("name","shivani")
+print db.getData("name")
