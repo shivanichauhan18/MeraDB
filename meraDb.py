@@ -40,3 +40,34 @@ class MeraDB():                        # this is my class where I create All fun
     def getData(self,key):
         get_value=self.jObject[key]
         return get_value
+
+    def getAll(self,all_data):
+        for key,value in all_data.items():
+            print key,"-", value
+    def rem(self,key):
+        if key in self.jObject:
+            del(self.jObject[key])
+        self.dump()
+    def existsKey(self,key):
+        if key in self.jObject:
+            return True
+        else:
+            return False
+
+    def totalKeys(self,all_data):
+        total_Keys=0
+        for key in all_data:
+            total_Keys=total_Keys+1
+        print total_Keys
+
+    def delDb(self,all_db):
+        del(self.jObject)
+        self.dump()
+    
+    def randomInsertKeys(self,str):
+        for word in str:
+            if word not in self.jObject:
+                self.jObject[word] =+ 1
+            else:
+                self.jObject[word] =+ 1
+        self.dump()
